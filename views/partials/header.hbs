@@ -1,0 +1,16 @@
+<header class="header">
+  <span>This is the header</span>
+  <div class="right">
+    <ul>
+      <li><a href="/">Home</a></li>
+      {{# if session.username}}
+        <li><a href="/user/profile">Profile</a></li>
+        <li><a href="/chat">Chat</a></li>
+        <li><a href="/user/logout">Logout</a></li>
+      {{else}}
+        <li><a href="/user/login">Login</a></li>
+        <li><a href="/user/register">Register</a></li>
+      {{/if}}
+    </ul>
+  </div>
+</header>

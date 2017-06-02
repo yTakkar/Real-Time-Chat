@@ -1,0 +1,14 @@
+<span class="online"></span>
+<span class="noti" data-username='{{ session.username }}'></span>
+<ul id="messages">
+    {{#if chats}}
+        {{#each chats as |val key|}}
+            <li>{{ this.username }}:{{ this.message }}</li>
+        {{/each}}
+    {{/if}}
+</ul>
+
+<form action="" class="chat">
+    <input id="m" autocomplete="off" autofocus>
+    <button>Send</button>
+</form>
